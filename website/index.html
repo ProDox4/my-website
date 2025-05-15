@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冒險歷程 - ProDo的領地</title>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="magic-circle">
+            <div class="circle-inner"></div>
+            <div class="circle-outer"></div>
+            <div class="magic-symbols">
+                ✧ ⚝ ✦ ⚜ ✧
+            </div>
+        </div>
+        <div class="loading-text">魔法詠唱中...</div>
+    </div>
+    
+    <div class="container">
+        <nav class="medieval-nav">
+            <ul>
+                <li><a href="index.html" class="active">🛡 關於我的領地</a></li>
+                <li><a href="journey.html">📜 冒險歷程</a></li>
+                <li><a href="grimoire.html">🧪 秘術典籍</a></li>
+                <li><a href="prophecy.html">🔮 預言之地</a></li>
+            </ul>
+        </nav>
+
+        <h1>歡迎來到我的領地</h1>
+        <hr class="divider">
+        
+        <div class="section" id="about">
+            <h2>🏰 我的編碼之塔</h2>
+            <div class="profile-section">
+                <div class="profile-photo">
+                    <img src="images/profile.png" alt="我的大頭照">
+                </div>
+                <div class="biography">
+                    <h3>📜 冒險者的故事</h3>
+                    <p>在這片神秘的數位領域中，我是一個追尋知識與智慧的旅人。</p>
+                    
+                    <h4>🌟 初始之章</h4>
+                    <p>放成長背景和教育經歷</p>
+                    
+                    <h4>⚔️ 冒險啟程</h4>
+                    <p>當我首次見到一行程式碼控制整個世界的樣貌時，心中便燃起了探索之火。
+                        我開始思考：如果我能學會這門魔法，是不是也能打造屬於自己的世界？
+                        於是我拿起鍵盤，踏上這條沒有儀式卻充滿挑戰的魔法修行之路。</p>
+                    
+                    <h4>🎯 冒險者信念</h4>
+                    <p>我相信，程式如同鍛造——每一行碼都是對秩序與創意鍊成。
+                        我秉持著「寫出有靈魂的程式」這一信念，不追求華而不實的魔法，而在意每一段邏輯是否優雅、每一個作品是否有溫度。
+                        在亂世中築起秩序，在混沌裡創造可能，正是我為自己選擇的道路。</p>
+                    
+                    <h4>🌈 未來征途</h4>
+                    <p>放職涯目標和期望</p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn">👾 Discord</a>
+                        <a href="#" class="social-btn">📸 Instagram</a>
+                        <a href="#" class="social-btn">🎵 Spotify</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="city">
+            <h2>🌆 駐紮的城市</h2>
+            <p>我自陽光炙熱的南境——屏東而生，童年在海風與稻田間度過。如今，我駐紮於高雄這座鋼鐵與創新的城市，繼續在數位荒原中磨練我的開發術。</p>
+        </div>
+
+        <div class="section" id="skills">
+            <h2>⚔️ 技能鍛造場</h2>
+            <p>我曾孤身一人走進知識之林，從零開始研習程式魔法。
+                靠著無數深夜的鍛鍊與嘗試，我逐步打造出屬於自己的技能之劍。</p>
+            
+            <div class="skills-showcase">
+                <div class="skill-category">
+                    <h3>🎯 前端魔法</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <span class="skill-name">HTML/CSS</span>
+                            <div class="progress-bar" style="width: 40%"></div>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="progress-bar" style="width: 10%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>⚡ 後端魔法</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <span class="skill-name">Python</span>
+                            <div class="progress-bar" style="width: 10%"></div>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">MySQL</span>
+                            <div class="progress-bar" style="width: 20%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="contact">
+            <h2>💬 傳送魔法</h2>
+            <p>🕊 魔法信鴿：RoDoDoKannzaki930103@gmail.com</p>
+            <p>🧭 旅人通訊站：<a href="#">LinkedIn</a></p>
+            <p>⚔️ 技術聖殿：<a href="#">GitHub</a></p>
+        </div>
+        
+        <div class="alchemy-timer">
+            <div class="timer-circle">
+                <div class="timer-content">
+                    <span class="timer-icon">⌛</span>
+                    <span class="update-label">最後施法時間</span>
+                    <span id="lastUpdate"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
