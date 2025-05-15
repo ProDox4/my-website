@@ -628,12 +628,18 @@ p {
     .social-links {
         flex-direction: column;
         align-items: center;
+        gap: 10px;
+        width: 100%;
     }
     
     .social-btn {
-        margin: 10px 0;
-        width: 80%;
+        width: 100%;
         text-align: center;
+        padding: 12px 15px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -797,12 +803,18 @@ p {
     .social-links {
         flex-direction: column;
         align-items: center;
+        gap: 10px;
+        width: 100%;
     }
     
     .social-btn {
-        margin: 10px 0;
-        width: 80%;
+        width: 100%;
         text-align: center;
+        padding: 12px 15px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
