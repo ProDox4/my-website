@@ -1,0 +1,1027 @@
+body {
+    background-color: #f4e4bc;
+    color: #2c1810;
+    font-family: 'MedievalSharp', cursive;
+    margin: 0;
+    padding: 20px;
+    background-image: url('https://www.transparenttextures.com/patterns/parchment.png');
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(255, 250, 240, 0.9);
+    border: 8px solid #8B4513;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #8B4513;
+    font-size: 3em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.divider {
+    border: none;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #8B4513, transparent);
+    margin: 20px 0;
+}
+
+.section {
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px solid #8B4513;
+    background-color: rgba(255, 250, 240, 0.7);
+}
+
+.section h2 {
+    color: #8B4513;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 1.2em;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.profile-photo {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border: 5px solid #8B4513;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.medieval-nav {
+    background-color: rgba(139, 69, 19, 0.9);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    border: 2px solid #5c2e0a;
+}
+
+.medieval-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.medieval-nav li {
+    position: relative;
+}
+
+.medieval-nav a {
+    color: #f4e4bc;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 5px 15px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.medieval-nav a:hover {
+    color: #fff;
+    text-shadow: 0 0 8px #fff;
+}
+
+.medieval-nav a::before {
+    content: '❧';
+    position: absolute;
+    left: -20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.medieval-nav a:hover::before {
+    opacity: 1;
+}
+
+
+/* 時間軸樣式 */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #8B4513, transparent);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    width: calc(50% - 30px);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: calc(50% + 30px);
+}
+
+.timeline-content {
+    background: rgba(255, 250, 240, 0.9);
+    padding: 20px;
+    border: 3px solid #8B4513;
+    border-radius: 5px;
+    position: relative;
+}
+
+.timeline-date {
+    color: #5c2e0a;
+    font-style: italic;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* 技能卡片樣式 */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.skill-card {
+    background: rgba(255, 250, 240, 0.9);
+    border: 3px solid #8B4513;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.skill-icon {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.skill-level {
+    margin-top: 10px;
+}
+
+.skill-stars {
+    color: #8B4513;
+    font-size: 1.2em;
+}
+
+.skill-exp {
+    font-size: 0.9em;
+    color: #5c2e0a;
+    margin-top: 5px;
+}
+
+.achievement-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.achievement-list li {
+    margin: 10px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.certification {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #8B4513;
+    border-radius: 3px;
+    background: rgba(139, 69, 19, 0.1);
+}
+
+/* 調整容器寬度 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 調整時間軸佈局 */
+.timeline {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.timeline-item {
+    width: calc(50% - 20px);
+    margin-bottom: 30px;
+}
+
+/* 調整技能卡片網格 */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+.skill-card {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 調整區塊間距 */
+.section {
+    margin-bottom: 50px;
+    padding: 30px;
+}
+
+/* 文章卡片網格 */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.article-card {
+    background: rgba(255, 250, 240, 0.9);
+    border: 3px solid #8B4513;
+    border-radius: 5px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.article-icon {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.article-desc {
+    color: #5c2e0a;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.article-meta {
+    font-size: 0.9em;
+    color: #8B4513;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.article-link {
+    display: inline-block;
+    color: #8B4513;
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: 2px solid #8B4513;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.article-link:hover {
+    background: #8B4513;
+    color: #f4e4bc;
+}
+
+/* 學習筆記區域 */
+.study-notes {
+    margin-top: 30px;
+}
+
+.note-card {
+    background: rgba(255, 250, 240, 0.9);
+    border: 3px solid #8B4513;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.note-link {
+    color: #8B4513;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.biography {
+    flex: 1;
+    padding: 20px;
+}
+
+.biography h3 {
+    color: #8B4513;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.biography h4 {
+    color: #5c2e0a;
+    font-size: 1.3em;
+    margin: 20px 0 10px;
+    border-bottom: 2px solid rgba(139, 69, 19, 0.3);
+    padding-bottom: 5px;
+}
+
+.biography p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.profile-section {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* 目標卡片樣式 */
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+.goal-card {
+    background: rgba(255, 250, 240, 0.9);
+    border: 3px solid #8B4513;
+    border-radius: 5px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.goal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.goal-icon {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.goal-progress {
+    margin-top: 15px;
+    background: rgba(139, 69, 19, 0.1);
+    border-radius: 10px;
+    padding: 5px;
+    position: relative;
+}
+
+.progress-bar {
+    height: 20px;
+    background: #8B4513;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+/* 專案卡片樣式 */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.project-card {
+    background: rgba(255, 250, 240, 0.9);
+    border: 3px solid #8B4513;
+    border-radius: 5px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.project-features {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.project-features li {
+    margin: 5px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.project-features li::before {
+    content: '⚔️';
+    position: absolute;
+    left: 0;
+}
+
+.project-status {
+    display: inline-block;
+    padding: 5px 10px;
+    background: rgba(139, 69, 19, 0.1);
+    border: 1px solid #8B4513;
+    border-radius: 3px;
+    color: #8B4513;
+}
+
+/* 團隊願景樣式 */
+.team-vision {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+.vision-card {
+    background: rgba(255, 250, 240, 0.9);
+    border: 3px solid #8B4513;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.vision-list {
+    list-style: none;
+    padding: 0;
+}
+
+.vision-list li {
+    margin: 10px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.vision-list li::before {
+    content: '🌟';
+    position: absolute;
+    left: 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-btn {
+    padding: 8px 15px;
+    background: rgba(139, 69, 19, 0.1);
+    border: 2px solid #8B4513;
+    border-radius: 5px;
+    color: #8B4513;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    background: #8B4513;
+    color: #f4e4bc;
+    transform: translateY(-2px);
+}
+
+.skills-showcase {
+    margin-top: 30px;
+}
+
+.skill-category {
+    margin-bottom: 30px;
+}
+
+.skill-category h3 {
+    color: #8B4513;
+    margin-bottom: 15px;
+}
+
+.skill-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill-bar {
+    background: rgba(139, 69, 19, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+}
+
+.skill-name {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #5c2e0a;
+    z-index: 1;
+    position: relative;
+}
+
+.skill-bar .progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(139, 69, 19, 0.2);
+    border-radius: 5px;
+    z-index: 0;
+}
+/* 基礎響應式設置 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 導航欄響應式 */
+@media screen and (max-width: 768px) {
+    .medieval-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .medieval-nav li {
+        margin: 10px 0;
+    }
+}
+
+/* 個人資料區響應式 */
+@media screen and (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .profile-photo {
+        margin-bottom: 20px;
+    }
+    
+    .profile-photo img {
+        max-width: 200px;
+    }
+    
+    .biography {
+        padding: 0 15px;
+    }
+}
+
+/* 技能展示區響應式 */
+@media screen and (max-width: 768px) {
+    .skills-showcase {
+        flex-direction: column;
+    }
+    
+    .skill-category {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .skill-bar {
+        margin: 15px 0;
+    }
+}
+
+/* 社交連結響應式 */
+@media screen and (max-width: 768px) {
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-btn {
+        margin: 10px 0;
+        width: 80%;
+        text-align: center;
+    }
+}
+
+/* 小型設備優化 */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    h3, h4 {
+        font-size: 1.2em;
+    }
+    
+    p {
+        font-size: 0.9em;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* 平板設備優化 */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
+    
+    .profile-section {
+        gap: 30px;
+    }
+}
+
+/* 煉金術計時器樣式 */
+.alchemy-timer {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.alchemy-timer:hover {
+    opacity: 1;
+}
+
+.timer-circle {
+    width: 80px;  /* 縮小尺寸 */
+    height: 80px; /* 縮小尺寸 */
+    background: rgba(255, 250, 240, 0.9);
+    border: 2px solid #8B4513;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-shadow: 0 0 15px rgba(139, 69, 19, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.timer-circle::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px dashed #8B4513;
+    border-radius: 50%;
+    animation: rotate 20s linear infinite;
+}
+
+.timer-content {
+    text-align: center;
+    z-index: 1;
+}
+
+.timer-icon {
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 2px;
+    color: #8B4513;
+}
+
+.update-label {
+    display: none; /* 隱藏標籤文字 */
+}
+
+#lastUpdate {
+    font-size: 0.6em;
+    color: #8B4513;
+    display: block;
+}
+
+/* 滑鼠懸停時顯示完整資訊 */
+.timer-circle:hover {
+    width: 120px;
+    height: 120px;
+    transition: all 0.3s ease;
+}
+
+.timer-circle:hover .update-label {
+    display: block;
+    font-size: 0.7em;
+    color: #5c2e0a;
+    margin-bottom: 2px;
+}
+
+.timer-circle:hover #lastUpdate {
+    font-size: 0.8em;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 響應式調整 */
+@media screen and (max-width: 768px) {
+    .alchemy-timer {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .timer-circle {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .timer-circle:hover {
+        width: 100px;
+        height: 100px;
+    }
+}
+/* 技能展示區響應式 */
+@media screen and (max-width: 768px) {
+    .skills-showcase {
+        flex-direction: column;
+    }
+    
+    .skill-category {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .skill-bar {
+        margin: 15px 0;
+    }
+}
+
+/* 社交連結響應式 */
+@media screen and (max-width: 768px) {
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-btn {
+        margin: 10px 0;
+        width: 80%;
+        text-align: center;
+    }
+}
+
+/* 小型設備優化 */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    h3, h4 {
+        font-size: 1.2em;
+    }
+    
+    p {
+        font-size: 0.9em;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* 平板設備優化 */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
+    
+    .profile-section {
+        gap: 30px;
+    }
+}
+
+/* 載入動畫樣式 */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s;
+}
+
+.loading-screen.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.magic-circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    animation: rotate 4s linear infinite;
+}
+
+.circle-inner, .circle-outer {
+    position: absolute;
+    border: 2px solid #9f7be1;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.circle-inner {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.circle-outer {
+    border-style: dashed;
+    animation: reverse-rotate 3s linear infinite;
+}
+
+.magic-symbols {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #9f7be1;
+    animation: glow 2s ease-in-out infinite;
+}
+
+.loading-text {
+    margin-top: 20px;
+    color: #9f7be1;
+    font-family: 'MedievalSharp', cursive;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes reverse-rotate {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.8); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(0.8); opacity: 0.5; }
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #9f7be1; }
+    50% { text-shadow: 0 0 20px #9f7be1, 0 0 30px #9f7be1; }
+    100% { text-shadow: 0 0 5px #9f7be1; }
+}
+
+/* 手機版優化 */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+        margin: 10px;
+        border-width: 4px;
+    }
+
+    .medieval-nav ul {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .medieval-nav a {
+        font-size: 1em;
+        padding: 8px 12px;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .goals-grid, .projects-grid, .team-vision {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .goal-card, .project-card, .vision-card {
+        margin: 0;
+        padding: 15px;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: calc(100% - 40px);
+        margin-left: 40px;
+    }
+
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+
+    .articles-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .article-card {
+        margin: 0;
+        padding: 15px;
+    }
+
+    .skill-card {
+        margin: 0;
+        padding: 15px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin: 15px 0;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+
+    .social-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .social-btn {
+        margin: 5px;
+    }
+}
